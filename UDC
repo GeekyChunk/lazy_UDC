@@ -1,0 +1,132 @@
+#!/usr/bin/python3
+from os import *
+CMD_001 = "clear"
+system(CMD_001)
+TGREEN =  '\033[32m' # Green Text
+print (TGREEN + "This is Ultra Arch Program")
+print(" ______________________________________________________________")
+print("| # Ultra Arch's DM configuration Program                      |")
+print("|______________________________________________________________|")
+print("|                                                              |")
+print("| <----------------------------------------------------------> |")
+print("| <----------------------------------------------------------> |")
+print("|______________________________________________________________|")
+print("| Ultra-Arch.ddns.net                                          |")
+print("|______________________________________________________________|")
+# ENDC = '\033[m' # reset to the defaults
+# print (TGREEN ,ENDC)
+print("Select the number of options!")
+print("\t1) Install Display Manager")
+print("\t2) Install Desktop")
+print("\t3) Change Display Manager")
+print("\t99) EXIT")
+SRV = input('Service: ')
+if '1' in SRV:
+    clear = "clear"
+    system(clear)
+    print("Select The number of Display Manager!")
+    print("\t1) GDM3: GNOME Display Manager")
+    print("\t2) LightDM: Recomded")
+    print("\t3) ssdm")
+    DM = input('UDC: ')
+    if '1' in DM:
+        clear = "clear"
+        system(clear)
+        ENT = input('Press Enter To Continue installation GDM3')
+        CMD = 'sudo apt-get install gdm3'
+        system(CMD)
+        ENR = input('Finished; Press Enter To Continue')
+    else:
+        A = 0
+    if '2' in DM:
+        clear = "clear"
+        system(clear)
+        ENT = input('Press Enter To Continue installation DM')
+        CMD = "sudo apt-get install lightdm"
+        system(CMD)
+        ENR = input('Finished; Press Enter To Continue')
+    else:
+        A = 0
+    if "3" in DM:
+        clear = "clear"
+        system(clear)
+        ENT = input('Press Enter To Continue installation DM')
+        CMD = "sudo apt-get install ssdm"
+        system(CMD)
+        ENR = input('Finished; Press Enter To Continue')
+    else:
+        A = 0
+
+else:
+    A = 0
+if "2" in SRV:
+    clear = "clear"
+    system(clear)
+    print("Choose Your Desktop!")
+    print("\n\t1) GNOME\n\t2) KDE Plasma\n\t3) Cinnamon\n\t4) XFCE \n\t5) MATE \n\t6) LXDE\n\tEnter) exit")
+    DTP = input('Desktop: ')
+    if "1" in DTP:
+        CMD = "sudo apt-get install gnome"
+        system(CMD)
+    else:
+        A = 0
+    if "2" in DTP:
+        CMD = "sudo apt-get install kde-plasma-desktop"
+        system(CMD)
+    else:
+        A = 0
+    if "3" in DTP:
+        CMD = "sudo apt-get install cinnamon"
+        system(CMD)
+    else:
+        A = 1
+
+    if "4" in DTP:
+        CMD = "sudo apt-get install xfce4"
+        system(CMD)
+    else:
+        A = 0
+    if "5" in DTP:
+        CMD = "sudo apt-get install mate mate-desktop"
+        system(CMD)
+    if "6" in DTP:
+        CMD = "sudo apt-get install lxde"
+        system(CMD)
+if "3" in SRV:
+    clear = "clear"
+    system(clear)
+    print("What Was Your Last Display Manager?(Defualt for desktop)\nGUIDE: kde= ssdm, GNOME= GDM3, XFCE & Cinnamon & Others= LightDM\n\t1) GDM3\n\t2) LightDM\n\t3) ssdm\n\t4) KDM")
+    LDM = input('Last DM: ')
+    if "1" in LDM:
+        clear = "clear"
+        system(clear)
+        CMD = "sudo dpkg-reconfigure gdm3"
+        system(CMD)
+    else:
+        A = 0
+    if "2" in LDM:
+        clear = "clear"
+        system(clear)
+        CMD = "sudo dpkg-reconfigure lightdm"
+        system(CMD)
+    else:
+        A = 0
+    if "3" in LDM:
+        clear = "clear"
+        system(clear)
+        CMD = "sudo dpkg-reconfigure ssdm"
+        system(CMD)
+    if "4" in LDM:
+        clear = "clear"
+        system(clear)
+        CMD = "sudo dpkg-reconfigure kdm"
+        system(CMD)
+    else:
+        A = 0
+if '99' in SRV:
+    system("clear")
+    exit()
+else:
+    A = 0
+UDC = "UDC"
+system(UDC)
