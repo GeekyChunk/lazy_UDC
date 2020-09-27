@@ -1,5 +1,6 @@
 # UDC
 Ultra-Arch Displaymanager configuration program
+using OS mudoale
 #
 Program to change DM & Desktop.
 # Email:
