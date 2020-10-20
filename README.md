@@ -18,3 +18,5 @@ Arsenic-MITM@protonmail.com
 # enjoy using That program:
 #
 ~$: UDC
+# system:
+only for deb(pacman is comming soon)
